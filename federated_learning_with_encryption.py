@@ -248,6 +248,7 @@ def local_learning(X, y, X_test, y_test, config):
         c.fit(config['n_iter'], config['eta'])
         y_pred = c.predict(X_test)
         mse = mean_square_error(y_pred, y_test)
+        
         print('{:s}:\t{:.2f}'.format(c.name, mse))
 
 
